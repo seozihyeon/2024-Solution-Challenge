@@ -43,7 +43,7 @@ pip install SpeechRecognition
 pip install librosa
 ```
 
-1. Run code
+3. Run code
 
 ```powershell
 sudo python3 stt.py
