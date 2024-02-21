@@ -2,16 +2,19 @@
 
 **Voice Phishing Detection and Prevention Education Application**
 
+
 ## 🦁 Team
 
 - `Taeyeon Ahn`:  PM, Design, Service planning and presentation
 - `Sihyeong Park` : Frontend(Android App Develop)
 - `Yujin Han` : Building a Voice Phishing Keyword Analysis Algorithm
 - `Jihyeon Seo` : Building a Voice Phishing Keyword Analysis Algorithm, API Integration
+  
 
 ## 🎯 Project Goal
 
 - Prevent voice phishing in advance, help application users become aware of it when voice phishing comes, and educate them on how to deal with it!
+  
 
 ## 🔍 Features
 
@@ -24,6 +27,7 @@
 ![Untitled](%F0%9F%AA%9DPhishing%20bc0c4e5de73446d6b9dbd8879600f8fa/Untitled%201.png)
 
 ![Untitled](%F0%9F%AA%9DPhishing%20bc0c4e5de73446d6b9dbd8879600f8fa/Untitled%202.png)
+
 
 ## 🔧 How to Use
 
