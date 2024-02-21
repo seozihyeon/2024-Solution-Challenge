@@ -22,7 +22,7 @@
 - Remind the user that the call they just made may be voice phishing, **after the call**
 - **After analyzing** the content of the call, the user is informed that a voice phishing keyword has been detected and a countermeasure is provided according to the type of voice phishing
 
-https://github.com/seozihyeon/2024-Solution-Challenge/issues/3#issue-2146891456
+![스크린샷 2024-02-21 232510](https://github.com/seozihyeon/2024-Solution-Challenge/assets/110870960/1f25abf6-e5aa-4cc4-99f1-552029d967ec)
 
 ## 🔧 How to Use
 
