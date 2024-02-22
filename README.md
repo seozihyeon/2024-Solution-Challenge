@@ -3,7 +3,7 @@
 **Voice Phishing Detection and Prevention Education Application**
 
 
-## 🦁 Team
+## 🦁 Team No. 10 Lions
 
 - `Taeyeon Ahn`:  PM, Design, Service planning and presentation
 - `Sihyeong Park` : Frontend(Android App Develop)
