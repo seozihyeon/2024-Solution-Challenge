@@ -27,7 +27,7 @@
 ## 🔧 How to Use
 
 - **Frontend**
-1. Install and run apk on Android device
+1. Install and run `app-release.apk` on Android device
 
 - **Backend**
 
