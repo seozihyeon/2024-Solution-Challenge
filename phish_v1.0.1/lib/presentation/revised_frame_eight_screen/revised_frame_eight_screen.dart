@@ -32,6 +32,21 @@ class RevisedFrameEightScreen extends StatelessWidget {
                 width: 320.h,
               ),
               SizedBox(height: 2.v),
+              CustomImageView(
+                imagePath: ImageConstant.imgGroup10,
+                height: 82.v,
+                width: 143.h,
+              ),
+              SizedBox(height: 17.v),
+              Text(
+                "Disactivated",
+                style: CustomTextStyles.headlineLargePoppinsBlack900,
+              ),
+              SizedBox(height: 5.v),
+              Text(
+                "You turned off the alert function",
+                style: theme.textTheme.bodyLarge,
+              ),
               CustomElevatedButton(
                 height: 40.h,
                 width: 100.h,
@@ -39,21 +54,6 @@ class RevisedFrameEightScreen extends StatelessWidget {
                 onPressed: () {
                   _completeSplash(context, RevisedFrameZeroplus3Screen());
                 },
-              ),
-              CustomImageView(
-                imagePath: ImageConstant.imgGroup10,
-                height: 78.5.v,
-                width: 143.h,
-              ),
-              SizedBox(height: 22.v),
-              Text(
-                "Disactivated",
-                style: theme.textTheme.headlineLarge,
-              ),
-              SizedBox(height: 5.v),
-              Text(
-                "You turned off the alert function",
-                style: theme.textTheme.bodyLarge,
               ),
             ],
           ),
@@ -142,7 +142,7 @@ class RevisedFrameEightScreen extends StatelessWidget {
   }
 }
 
-  void _completeSplash(BuildContext context, Widget widget) {
-    Navigator.pushReplacement(
-        context, MaterialPageRoute(builder: (BuildContext context) => widget));
-  }
+void _completeSplash(BuildContext context, Widget widget) {
+  Navigator.pushReplacement(
+      context, MaterialPageRoute(builder: (BuildContext context) => widget));
+}

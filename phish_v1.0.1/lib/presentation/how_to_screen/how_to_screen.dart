@@ -12,7 +12,8 @@ class HowToScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return SafeArea(
       child: Scaffold(
-        body: Container(
+        body: SingleChildScrollView(
+        child: Container(
           width: double.maxFinite,
           padding: EdgeInsets.all(24.h),
           child: Column(
@@ -57,6 +58,7 @@ class HowToScreen extends StatelessWidget {
             ],
           ),
         ),
+      ),
       ),
     );
   }

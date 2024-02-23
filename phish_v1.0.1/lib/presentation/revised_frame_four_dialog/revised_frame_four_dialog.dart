@@ -30,7 +30,7 @@ class RevisedFrameFourDialog extends StatelessWidget {
         children: [
           SizedBox(height: 150.v),
           Text(
-            "How to use this app ",
+            "How to use this app",
             style: theme.textTheme.headlineMedium,
           ),
           SizedBox(height: 60.v),
@@ -45,7 +45,7 @@ class RevisedFrameFourDialog extends StatelessWidget {
                 children: [
                   CustomImageView(
                     imagePath: ImageConstant.imgGroup10,
-                    height: 74.4.v,
+                    height: 78.v,
                     width: 135.h,
                     alignment: Alignment.topRight,
                   ),
@@ -70,7 +70,7 @@ class RevisedFrameFourDialog extends StatelessWidget {
           SizedBox(height: 45.v),
           CustomImageView(
             imagePath: ImageConstant.imgGroup10LightGreen300,
-            height: 74.4.v,
+            height: 78.v,
             width: 135.h,
           ),
           SizedBox(height: 45.v),

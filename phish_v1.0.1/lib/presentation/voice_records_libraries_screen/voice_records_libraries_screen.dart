@@ -4,6 +4,7 @@ import 'package:phish/widgets/app_bar/appbar_leading_image.dart';
 import 'package:phish/widgets/app_bar/appbar_trailing_image.dart';
 import 'package:phish/widgets/app_bar/custom_app_bar.dart';
 import 'package:phish/widgets/custom_elevated_button.dart';
+import 'package:phish/presentation/alert_page_3_one_screen/alert_page_3_one_screen.dart';
 
 class VoiceRecordsLibrariesScreen extends StatelessWidget {
   const VoiceRecordsLibrariesScreen({Key? key})
@@ -31,7 +32,7 @@ class VoiceRecordsLibrariesScreen extends StatelessWidget {
                 width: 280.adaptSize,
                 alignment: Alignment.centerLeft,
               ),
-              SizedBox(height: 63.v),
+              SizedBox(height: 15.v),
               Container(
                 width: 250.h,
                 margin: EdgeInsets.only(
@@ -92,6 +93,9 @@ class VoiceRecordsLibrariesScreen extends StatelessWidget {
     return CustomElevatedButton(
       width: 200.h,
       text: "Back to Main",
+      onPressed: () {
+        _completeSplash(context, AlertPage3OneScreen());
+      },
       margin: EdgeInsets.only(
         left: 80.h,
         right: 80.h,
@@ -100,4 +104,9 @@ class VoiceRecordsLibrariesScreen extends StatelessWidget {
       buttonTextStyle: CustomTextStyles.headlineLarge_1,
     );
   }
+}
+
+void _completeSplash(BuildContext context, Widget widget) {
+  Navigator.pushReplacement(
+      context, MaterialPageRoute(builder: (BuildContext context) => widget));
 }

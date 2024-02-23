@@ -14,12 +14,29 @@ class ImageConstant {
   static String imgLanguages1 = '$imagePath/img_languages_1.png';
 
   // Revised Frame Four images
-  static String imgGroup10 = '$imagePath/img_group_10.svg';
+  static String imgGroup10 = '$imagePath/img_group_10.png';
 
   static String imgSwipeRight1 = '$imagePath/img_swipe_right_1.png';
 
+  // Alert page 1-One images
+  static String imgImage7 = '$imagePath/img_image_7.png';
+
+  // Alert page 1-Two images
+  static String imgGiveMoney1 = '$imagePath/img_give_money_1.png';
+
+  // Common images
+  static String imgAlertPage2One = '$imagePath/img_alert_page_2_one.png';
+
+  static String imgGroup29 = '$imagePath/img_group_29.svg';
+
+  // Alert page 2-Two images
+  static String imgFright = '$imagePath/img_fright.png';
+
   // Alert page 3-One images
   static String imgImage8 = '$imagePath/img_image_8.png';
+
+  // Alert page 3-Two images
+  static String imgComplete = '$imagePath/img_complete.png';
 
   // Voice records libraries images
   static String imgFreeIconReload7358485 =
@@ -69,7 +86,7 @@ class ImageConstant {
   static String imgPhising1 = '$imagePath/img_phising_1.png';
 
   static String imgGroup10LightGreen300 =
-      '$imagePath/img_group_10_light_green_300.svg';
+      '$imagePath/img_group_10_light_green_300.png';
 
   static String imgFile1 = '$imagePath/img_file_1.png';
 

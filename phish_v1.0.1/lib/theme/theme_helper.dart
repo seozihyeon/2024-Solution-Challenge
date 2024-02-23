@@ -86,6 +86,12 @@ class TextThemes {
           fontFamily: 'Poppins',
           fontWeight: FontWeight.w300,
         ),
+        bodyMedium: TextStyle(
+          color: appTheme.black900,
+          fontSize: 20.fSize,
+          fontFamily: 'Poppins',
+          fontWeight: FontWeight.w300,
+        ),
         bodySmall: TextStyle(
           color: appTheme.gray900,
           fontSize: 12.fSize,
@@ -112,13 +118,23 @@ class TextThemes {
         ),
         headlineSmall: TextStyle(
           color: appTheme.whiteA700,
-          fontSize: 24.fSize,
           fontFamily: 'Poppins',
           fontWeight: FontWeight.w600,
         ),
+        labelLarge: TextStyle(
+          color: appTheme.whiteA700,
+          fontSize: 12.fSize,
+          fontFamily: 'Inter',
+          fontWeight: FontWeight.w900,
+        ),
         titleLarge: TextStyle(
           color: appTheme.black900,
-          fontSize: 20.fSize,
+          fontFamily: 'Inter',
+          fontWeight: FontWeight.w300,
+        ),
+        titleSmall: TextStyle(
+          color: appTheme.black900,
+          fontSize: 16.3.fSize,
           fontFamily: 'Inter',
           fontWeight: FontWeight.w300,
         ),
@@ -149,12 +165,21 @@ class PrimaryColors {
   Color get blueGray10001 => Color(0XFFD6D6D6);
   Color get blueGray50 => Color(0XFFF0EFF5);
 
+  // DeepPurple
+  Color get deepPurple500 => Color(0XFF6D48BA);
+
   // Gray
   Color get gray100 => Color(0XFFF6F6F6);
   Color get gray300 => Color(0XFFE6E6E6);
   Color get gray50 => Color(0XFFF9F9F9);
   Color get gray500 => Color(0XFF999999);
   Color get gray900 => Color(0XFF16182C);
+
+  // Grayf
+  Color get gray6007f => Color(0X7F858585);
+
+  // GrayBf
+  Color get gray800Bf => Color(0XBF4C4C4C);
 
   // LightGreen
   Color get lightGreen300 => Color(0XFF9AFF81);

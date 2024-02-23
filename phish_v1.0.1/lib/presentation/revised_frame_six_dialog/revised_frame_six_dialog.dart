@@ -33,7 +33,7 @@ class RevisedFrameSixDialog extends StatelessWidget {
             height: 192.adaptSize,
             width: 192.adaptSize,
           ),
-          SizedBox(height: 120.v),
+          SizedBox(height: 110.v),
           SizedBox(
             width: 278.h,
             child: Text(
@@ -46,6 +46,7 @@ class RevisedFrameSixDialog extends StatelessWidget {
               ),
             ),
           ),
+          SizedBox(height: 10.v),
                     CustomElevatedButton(
                 height: 50.h,
                 width: 100.h,
@@ -54,7 +55,7 @@ class RevisedFrameSixDialog extends StatelessWidget {
                   _completeSplash(context, RevisedFrameZeroplus2Screen());
                 },
               ),
-          SizedBox(height: 50.v),
+          SizedBox(height: 45.v),
           SizedBox(
             height: 7.v,
             child: AnimatedSmoothIndicator(

@@ -31,16 +31,16 @@ class RevisedFrameSevenScreen extends StatelessWidget {
                 height: 240.v,
                 width: 320.h,
               ),
-              SizedBox(height: 49.v),
+              SizedBox(height: 40.v),
               CustomImageView(
                 imagePath: ImageConstant.imgGroup10LightGreen300,
-                height: 78.5.v,
+                height: 82.v,
                 width: 143.h,
               ),
               SizedBox(height: 22.v),
               Text(
                 "Activated",
-                style: theme.textTheme.headlineLarge,
+                style: CustomTextStyles.headlineLargePoppinsBlack900,
               ),
               SizedBox(height: 5.v),
               Text(

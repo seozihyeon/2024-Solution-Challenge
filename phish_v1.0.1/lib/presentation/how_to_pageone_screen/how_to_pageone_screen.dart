@@ -117,14 +117,14 @@ class HowToPageoneScreen extends StatelessWidget {
             ),
           ),
           Align(
-            alignment: Alignment.bottomCenter,
+            alignment: Alignment.center,
             child: SizedBox(
               width: 247.h,
               child: Text(
                 "Report Damage and\nSuspension Request",
                 maxLines: 2,
                 overflow: TextOverflow.ellipsis,
-                style: theme.textTheme.headlineSmall,
+                style: CustomTextStyles.titleLargePoppinsWhiteA800,
               ),
             ),
           ),

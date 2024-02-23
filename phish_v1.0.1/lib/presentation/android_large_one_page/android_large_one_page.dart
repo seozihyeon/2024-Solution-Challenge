@@ -1,5 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:phish/core/app_export.dart';
+import 'package:carousel_slider/carousel_slider.dart';
+
+import 'package:phish/widgets/custom_elevated_button.dart';
+import 'package:smooth_page_indicator/smooth_page_indicator.dart';
 
 // ignore_for_file: must_be_immutable
 class AndroidLargeOnePage extends StatefulWidget {
@@ -16,6 +20,7 @@ class AndroidLargeOnePageState extends State<AndroidLargeOnePage>
     with AutomaticKeepAliveClientMixin<AndroidLargeOnePage> {
   @override
   bool get wantKeepAlive => true;
+  int sliderIndex = 0;
   @override
   Widget build(BuildContext context) {
     return SafeArea(
@@ -63,6 +68,9 @@ class AndroidLargeOnePageState extends State<AndroidLargeOnePage>
                       ),
                       SizedBox(height: 2.v),
                       _buildSeventeen(context),
+                      SizedBox(
+                        height: 8.v,
+                      ),
                       SizedBox(height: 32.v),
                       Padding(
                         padding: EdgeInsets.only(left: 7.h),
@@ -73,16 +81,15 @@ class AndroidLargeOnePageState extends State<AndroidLargeOnePage>
                       ),
                       SizedBox(height: 2.v),
                       _buildEighteen(context),
-                      SizedBox(height: 31.v),
+                      SizedBox(height: 32.v),
                       Padding(
                         padding: EdgeInsets.only(left: 7.h),
                         child: Text(
                           "2024.01.XX",
-                          textAlign: TextAlign.center,
                           style: theme.textTheme.bodyLarge,
                         ),
                       ),
-                      SizedBox(height: 3.v),
+                      SizedBox(height: 2.v),
                       _buildNineteen(context),
                     ],
                   ),

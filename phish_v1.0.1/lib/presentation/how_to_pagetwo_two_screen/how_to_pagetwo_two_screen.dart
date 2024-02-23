@@ -3,6 +3,7 @@ import 'package:phish/core/app_export.dart';
 import 'package:phish/widgets/app_bar/appbar_subtitle_two.dart';
 import 'package:phish/widgets/app_bar/custom_app_bar.dart';
 import 'package:phish/widgets/custom_elevated_button.dart';
+import 'package:phish/presentation/revised_frame_zeroplus7_screen/revised_frame_zeroplus7_screen.dart';
 
 class HowToPagetwoTwoScreen extends StatelessWidget {
   const HowToPagetwoTwoScreen({Key? key})
@@ -14,44 +15,52 @@ class HowToPagetwoTwoScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return SafeArea(
       child: Scaffold(
-        appBar: _buildAppBar(context),
-        body: Container(
+        body: SizedBox(
           width: double.maxFinite,
-          padding: EdgeInsets.symmetric(
-            horizontal: 12.h,
-            vertical: 36.v,
-          ),
           child: Column(
+            mainAxisAlignment: MainAxisAlignment.center,
             children: [
-              CustomImageView(
-                imagePath: ImageConstant.imgHacked13,
-                height: 300.adaptSize,
-                width: 300.adaptSize,
-              ),
-              SizedBox(height: 36.v),
-              Align(
-                alignment: Alignment.centerRight,
-                child: Container(
-                  width: 304.h,
-                  margin: EdgeInsets.only(left: 30.h),
-                  child: Text(
-                    "Share damage cases  by contacting the Voice Phishing Guard website",
-                    maxLines: 3,
-                    overflow: TextOverflow.ellipsis,
-                    textAlign: TextAlign.center,
-                    style: theme.textTheme.titleLarge!.copyWith(
-                      height: 1.23,
+              SizedBox(
+                height: 416.v,
+                width: double.maxFinite,
+                child: Stack(
+                  alignment: Alignment.bottomCenter,
+                  children: [
+                    _buildHowToPageTwoTwoFrameThirtyNine(context),
+                    CustomImageView(
+                      imagePath: ImageConstant.imgHacked13,
+                      height: 300.adaptSize,
+                      width: 300.adaptSize,
+                      alignment: Alignment.bottomCenter,
                     ),
+                  ],
+                ),
+              ),
+              SizedBox(height: 35.v),
+              Container(
+                width: 400.h,
+                margin: EdgeInsets.only(
+                  left: 10.h,
+                  right: 10.h,
+                ),
+                child: Text(
+                  "Share damage cases\nby contacting the Voice Phishing\n Guard website",
+                  maxLines: 3,
+                  overflow: TextOverflow.ellipsis,
+                  textAlign: TextAlign.center,
+                  style: theme.textTheme.titleLarge!.copyWith(
+                    height: 1.23,
                   ),
                 ),
               ),
-              SizedBox(height: 55.v),
+              SizedBox(height: 51.v),
               CustomElevatedButton(
                 width: 200.h,
                 text: "Back to Main",
-                buttonTextStyle: CustomTextStyles.headlineLarge_1,
+                onPressed: () {
+                  _completeSplash(context, RevisedFrameZeroplus7Screen());
+                },
               ),
-              SizedBox(height: 5.v),
             ],
           ),
         ),
@@ -60,61 +69,90 @@ class HowToPagetwoTwoScreen extends StatelessWidget {
   }
 
   /// Section Widget
-  PreferredSizeWidget _buildAppBar(BuildContext context) {
-    return CustomAppBar(
-      height: 148.v,
-      title: Padding(
-        padding: EdgeInsets.only(left: 7.h),
-        child: Row(
+  Widget _buildHowToPageTwoTwoFrameThirtyNine(BuildContext context) {
+    return Align(
+      alignment: Alignment.topCenter,
+      child: SizedBox(
+        height: 130.v,
+        width: double.maxFinite,
+        child: Stack(
+          alignment: Alignment.centerRight,
           children: [
-            Container(
-              height: 47.999992.v,
-              width: 36.h,
-              margin: EdgeInsets.only(
-                top: 10.v,
-                bottom: 16.v,
-              ),
-              child: Stack(
-                alignment: Alignment.center,
-                children: [
-                  Align(
-                    alignment: Alignment.center,
-                    child: Container(
-                      height: 36.adaptSize,
-                      width: 36.adaptSize,
-                      margin: EdgeInsets.only(
-                        top: 5.v,
-                        bottom: 6.v,
-                      ),
-                      decoration: BoxDecoration(
-                        color: appTheme.whiteA700,
-                        borderRadius: BorderRadius.circular(
-                          18.h,
+            Align(
+              alignment: Alignment.topCenter,
+              child: Card(
+                clipBehavior: Clip.antiAlias,
+                elevation: 0,
+                margin: EdgeInsets.all(0),
+                color: appTheme.black900,
+                shape: RoundedRectangleBorder(
+                  borderRadius: BorderRadiusStyle.circleBorder40,
+                ),
+                child: Container(
+                  height: 80.v,
+                  width: double.maxFinite,
+                  padding: EdgeInsets.symmetric(
+                    horizontal: 7.h,
+                    vertical: 14.v,
+                  ),
+                  decoration: AppDecoration.fillBlack.copyWith(
+                    borderRadius: BorderRadiusStyle.circleBorder40,
+                  ),
+                  child: Stack(
+                    alignment: Alignment.topLeft,
+                    children: [
+                      Align(
+                        alignment: Alignment.topLeft,
+                        child: Container(
+                          height: 36.adaptSize,
+                          width: 36.adaptSize,
+                          margin: EdgeInsets.only(top: 5.v),
+                          decoration: BoxDecoration(
+                            color: appTheme.whiteA700,
+                            borderRadius: BorderRadius.circular(
+                              18.h,
+                            ),
+                          ),
                         ),
                       ),
-                    ),
-                  ),
-                  Align(
-                    alignment: Alignment.center,
-                    child: Padding(
-                      padding: EdgeInsets.symmetric(horizontal: 8.h),
-                      child: Text(
-                        "7",
-                        style: CustomTextStyles.headlineLargePoppinsBlack900,
+                      Align(
+                        alignment: Alignment.topLeft,
+                        child: Padding(
+                          padding: EdgeInsets.only(left: 9.h),
+                          child: Text(
+                            "7",
+                            style:
+                                CustomTextStyles.headlineLargePoppinsBlack900,
+                          ),
+                        ),
                       ),
-                    ),
+                    ],
                   ),
-                ],
+                ),
               ),
             ),
-            AppbarSubtitleTwo(
-              text: "Personal information exposure registration",
-              margin: EdgeInsets.only(left: 21.h),
+            Align(
+              alignment: Alignment.topCenter,
+              child: Container(
+                width: 300.h,
+                margin: EdgeInsets.only(left: 30.h),
+                child: Text(
+                  "Personal information\nexposure registration",
+                  maxLines: 3,
+                  overflow: TextOverflow.ellipsis,
+                  textAlign: TextAlign.center,
+                  style: CustomTextStyles.headlineMediumWhiteA700,
+                ),
+              ),
             ),
           ],
         ),
       ),
-      styleType: Style.bgFill,
     );
   }
 }
+
+  void _completeSplash(BuildContext context, Widget widget) {
+    Navigator.pushReplacement(
+        context, MaterialPageRoute(builder: (BuildContext context) => widget));
+  }
