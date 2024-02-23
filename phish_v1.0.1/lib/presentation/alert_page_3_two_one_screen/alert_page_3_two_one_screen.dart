@@ -16,17 +16,27 @@ class AlertPage3TwoOneScreen extends StatelessWidget {
         appBar: _buildAppBar(context),
         body: Container(
           width: double.maxFinite,
-          padding: EdgeInsets.symmetric(vertical: 4.v),
+          padding: EdgeInsets.symmetric(
+            horizontal: 32.h,
+            vertical: 12.v,
+          ),
           child: Column(
             children: [
+              SizedBox(height: 10.v),
+              CustomImageView(
+                imagePath: ImageConstant.imgComplete,
+                height: 280.adaptSize,
+                width: 280.adaptSize,
+                alignment: Alignment.center,
+              ),
               Spacer(
-                flex: 68,
+                flex: 15,
               ),
               SizedBox(
                 width: 242.h,
                 child: Text(
                   "Analyzing Completed!",
-                  maxLines: 2,
+                  maxLines: 3,
                   overflow: TextOverflow.ellipsis,
                   textAlign: TextAlign.center,
                   style: theme.textTheme.displayMedium,

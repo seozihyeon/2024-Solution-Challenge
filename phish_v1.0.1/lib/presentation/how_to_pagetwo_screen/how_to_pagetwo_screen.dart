@@ -10,74 +10,125 @@ class HowToPagetwoScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return SafeArea(
-        child: Scaffold(
-            appBar: _buildAppBar(context),
-            body: Container(
-                width: double.maxFinite,
-                padding: EdgeInsets.symmetric(horizontal: 23.h, vertical: 36.v),
-                child: Column(children: [
-                  CustomImageView(
-                      imagePath: ImageConstant.imgHacked1,
-                      height: 300.adaptSize,
-                      width: 300.adaptSize),
-                  SizedBox(height: 35.v),
-                  GestureDetector(
-                      onTap: () {
-                        onTapTxtDescription(context);
-                      },
-                      child: Container(
-                          width: 302.h,
-                          margin: EdgeInsets.only(left: 11.h),
-                          child: Text(
-                              "Personal information exposure accident prevention system\n (http://pd.fss.or.kr) Accident registration",
-                              maxLines: 4,
-                              overflow: TextOverflow.ellipsis,
-                              textAlign: TextAlign.center,
-                              style: theme.textTheme.titleLarge!
-                                  .copyWith(height: 1.23)))),
-                  SizedBox(height: 26.v),
-                  CustomElevatedButton(width: 200.h, text: "Next"),
-                  SizedBox(height: 5.v)
-                ]))));
+      child: Scaffold(
+        body: SizedBox(
+          width: double.maxFinite,
+          child: Column(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: [
+              _buildHowToPageTwoFrameThirtyEight(context),
+              SizedBox(height: 33.v),
+              CustomImageView(
+                imagePath: ImageConstant.imgHacked1,
+                height: 300.adaptSize,
+                width: 300.adaptSize,
+              ),
+              SizedBox(height: 36.v),
+              Align(
+                alignment: Alignment.centerRight,
+                child: Container(
+                  width: 307.h,
+                  margin: EdgeInsets.only(
+                    left: 36.h,
+                    right: 16.h,
+                  ),
+                  child: Text(
+                    "Personal information exposure accident prevention system\n (http://pd.fss.or.kr) Accident registration",
+                    maxLines: 4,
+                    overflow: TextOverflow.ellipsis,
+                    textAlign: TextAlign.center,
+                    style: theme.textTheme.titleLarge!.copyWith(
+                      height: 1.23,
+                    ),
+                  ),
+                ),
+              ),
+              SizedBox(height: 26.v),
+              CustomElevatedButton(
+                width: 200.h,
+                text: "Next",
+              ),
+            ],
+          ),
+        ),
+      ),
+    );
   }
 
   /// Section Widget
-  PreferredSizeWidget _buildAppBar(BuildContext context) {
-    return CustomAppBar(
-        height: 148.v,
-        title: Padding(
-            padding: EdgeInsets.only(left: 7.h),
-            child: Row(children: [
-              Container(
-                  height: 48.v,
-                  width: 36.h,
-                  margin: EdgeInsets.only(top: 9.v, bottom: 17.v),
-                  child: Stack(alignment: Alignment.center, children: [
+  Widget _buildHowToPageTwoFrameThirtyEight(BuildContext context) {
+    return SizedBox(
+      height: 82.v,
+      width: double.maxFinite,
+      child: Stack(
+        alignment: Alignment.bottomCenter,
+        children: [
+          Align(
+            alignment: Alignment.topCenter,
+            child: Card(
+              clipBehavior: Clip.antiAlias,
+              elevation: 0,
+              margin: EdgeInsets.all(0),
+              color: appTheme.black900,
+              shape: RoundedRectangleBorder(
+                borderRadius: BorderRadiusStyle.circleBorder40,
+              ),
+              child: Container(
+                height: 80.v,
+                width: double.maxFinite,
+                padding: EdgeInsets.symmetric(
+                  horizontal: 7.h,
+                  vertical: 14.v,
+                ),
+                decoration: AppDecoration.fillBlack.copyWith(
+                  borderRadius: BorderRadiusStyle.circleBorder40,
+                ),
+                child: Stack(
+                  alignment: Alignment.topLeft,
+                  children: [
                     Align(
-                        alignment: Alignment.center,
-                        child: Container(
-                            height: 36.adaptSize,
-                            width: 36.adaptSize,
-                            margin: EdgeInsets.only(top: 6.v, bottom: 5.v),
-                            decoration: BoxDecoration(
-                                color: appTheme.whiteA700,
-                                borderRadius: BorderRadius.circular(18.h)))),
+                      alignment: Alignment.topLeft,
+                      child: Container(
+                        height: 36.adaptSize,
+                        width: 36.adaptSize,
+                        margin: EdgeInsets.only(top: 5.v),
+                        decoration: BoxDecoration(
+                          color: appTheme.whiteA700,
+                          borderRadius: BorderRadius.circular(
+                            18.h,
+                          ),
+                        ),
+                      ),
+                    ),
                     Align(
-                        alignment: Alignment.center,
-                        child: Padding(
-                            padding: EdgeInsets.only(left: 8.h, right: 7.h),
-                            child: Text("2",
-                                style: CustomTextStyles
-                                    .headlineLargePoppinsBlack900)))
-                  ])),
-              AppbarSubtitleTwo(
-                  text: "Personal information exposure registration",
-                  margin: EdgeInsets.only(left: 21.h))
-            ])),
-        styleType: Style.bgFill);
-  }
-
-  onTapTxtDescription(BuildContext context) {
-    // TODO: implement Actions
+                      alignment: Alignment.topLeft,
+                      child: Padding(
+                        padding: EdgeInsets.only(left: 8.5.h),
+                        child: Text(
+                          "2",
+                          style: CustomTextStyles.headlineLargePoppinsBlack900,
+                        ),
+                      ),
+                    ),
+                  ],
+                ),
+              ),
+            ),
+          ),
+          Align(
+            alignment: Alignment.center,
+            child: SizedBox(
+              width: 247.h,
+              child: Text(
+                "Personal information exposure registration",
+                maxLines: 2,
+                overflow: TextOverflow.ellipsis,
+                style: CustomTextStyles.titleLargePoppinsWhiteA800,
+              ),
+            ),
+          ),
+        ],
+      ),
+    );
   }
 }

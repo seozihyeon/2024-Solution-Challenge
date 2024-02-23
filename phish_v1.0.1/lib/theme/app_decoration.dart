@@ -9,11 +9,27 @@ class AppDecoration {
   static BoxDecoration get fillGray => BoxDecoration(
         color: appTheme.gray300,
       );
+
+  static BoxDecoration get fillGrayBf => BoxDecoration(
+        color: appTheme.gray800Bf,
+      );
+  static BoxDecoration get fillGrayF => BoxDecoration(
+        color: appTheme.gray6007f,
+      );
   static BoxDecoration get fillWhiteA => BoxDecoration(
         color: appTheme.whiteA700,
       );
 
   // Outline decorations
+
+  static BoxDecoration get outlineWhite => BoxDecoration(
+        color: appTheme.whiteA700,
+        border: Border.all(
+          color: appTheme.black900.withOpacity(0.25),
+          width: 1.h,
+        ),
+      );
+
   static BoxDecoration get outlineBlack => BoxDecoration(
         color: appTheme.blueGray50,
         border: Border.all(
@@ -34,6 +50,13 @@ class AppDecoration {
           width: 4.h,
         ),
       );
+  static BoxDecoration get outlineBlack9002 => BoxDecoration(
+        color: appTheme.gray300,
+        border: Border.all(
+          color: appTheme.black900,
+          width: 4.h,
+        ),
+      );
   static BoxDecoration get outlineGray => BoxDecoration(
         color: appTheme.gray50,
         border: Border.all(
@@ -45,6 +68,10 @@ class AppDecoration {
 
 class BorderRadiusStyle {
   // Circle borders
+  static BorderRadius get circleBorder18 => BorderRadius.circular(
+        18.h,
+      );
+
   static BorderRadius get circleBorder40 => BorderRadius.circular(
         40.h,
       );
@@ -67,6 +94,11 @@ class BorderRadiusStyle {
   static BorderRadius get roundedBorder10 => BorderRadius.circular(
         10.h,
       );
+
+  static BorderRadius get roundedBorder4 => BorderRadius.circular(
+        4.h,
+      );
+
   static BorderRadius get roundedBorder50 => BorderRadius.circular(
         50.h,
       );

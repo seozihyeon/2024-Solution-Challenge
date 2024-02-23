@@ -13,6 +13,13 @@ import 'package:phish/core/app_export.dart';
 import 'package:phish/widgets/custom_elevated_button.dart';
 import 'package:smooth_page_indicator/smooth_page_indicator.dart';
 
+import 'package:phish/presentation/how_to_screen/how_to_screen.dart';
+import 'package:phish/presentation/how_to_pageone_screen/how_to_pageone_screen.dart';
+import 'package:phish/presentation/how_to_pagetwo_screen/how_to_pagetwo_screen.dart';
+import 'package:phish/presentation/how_to_pagetwo_one_screen/how_to_pagetwo_one_screen.dart';
+import 'package:phish/presentation/how_to_pagetwo_three_screen/how_to_pagetwo_three_screen.dart';
+
+
 
 
 class RevisedFrameZeroplus5Screen extends StatelessWidget {
@@ -29,9 +36,12 @@ class RevisedFrameZeroplus5Screen extends StatelessWidget {
             child: PageView(
               controller: _controller,
               children: [
-                AndroidLargeOnePage(),
-                AndroidLargeTwoPage(),
-                AndroidLargeTwoTabContainerScreen(),
+                HowToScreen(),
+                HowToPageoneScreen(),
+                HowToPagetwoScreen(),
+                HowToPagetwoOneScreen(),
+                HowToPagetwoThreeScreen(),
+                
 
               ],
             ),
@@ -42,7 +52,7 @@ class RevisedFrameZeroplus5Screen extends StatelessWidget {
             padding: const EdgeInsets.all(8.0),
             child: SmoothPageIndicator(
                                 controller: _controller, // PageController
-                                count: 8,
+                                count: 5,
                   effect: ScrollingDotsEffect(
                     spacing: 17.11,
                     activeDotColor: appTheme.blueA200,

@@ -112,7 +112,7 @@ class HowToPagetwoFourScreen extends StatelessWidget {
                       Align(
                         alignment: Alignment.topLeft,
                         child: Padding(
-                          padding: EdgeInsets.only(left: 8.h),
+                          padding: EdgeInsets.only(left: 7.h),
                           child: Text(
                             "5",
                             style:
@@ -126,7 +126,7 @@ class HowToPagetwoFourScreen extends StatelessWidget {
               ),
             ),
             Align(
-              alignment: Alignment.centerRight,
+              alignment: Alignment.topRight,
               child: Container(
                 width: 237.h,
                 margin: EdgeInsets.only(right: 49.h),

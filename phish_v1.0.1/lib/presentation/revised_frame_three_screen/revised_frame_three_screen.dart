@@ -31,12 +31,12 @@ class RevisedFrameThreeScreen extends StatelessWidget {
               SizedBox(height: 35.v),
               Text(
                 "Select language",
-                style: theme.textTheme.headlineLarge,
+                style: CustomTextStyles.headlineLargePoppinsGray900,
               ),
               SizedBox(height: 3.v),
               Text(
                 "Please set your language to use app",
-                style: theme.textTheme.bodyLarge,
+                style: CustomTextStyles.bodyLargeInterGray900,
               ),
               SizedBox(height: 22.v),
               SizedBox(

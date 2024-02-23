@@ -1,128 +1,231 @@
+import '../android_large_two_tab_container_screen/widgets/topicgrid_item_widget.dart';
 import 'package:flutter/material.dart';
 import 'package:phish/core/app_export.dart';
-import 'package:phish/presentation/android_large_one_page/android_large_one_page.dart';
-import 'package:phish/presentation/android_large_two_page/android_large_two_page.dart';
-import 'package:phish/widgets/app_bar/appbar_title.dart';
-import 'package:phish/widgets/app_bar/appbar_trailing_image.dart';
-import 'package:phish/widgets/app_bar/custom_app_bar.dart';
+import 'package:phish/widgets/custom_icon_button.dart';
+import 'package:phish/widgets/custom_outlined_button.dart';
 
-class AndroidLargeTwoTabContainerScreen extends StatefulWidget {
+class AndroidLargeTwoTabContainerScreen extends StatelessWidget {
   const AndroidLargeTwoTabContainerScreen({Key? key})
       : super(
           key: key,
         );
 
   @override
-  AndroidLargeTwoTabContainerScreenState createState() =>
-      AndroidLargeTwoTabContainerScreenState();
-}
-
-class AndroidLargeTwoTabContainerScreenState
-    extends State<AndroidLargeTwoTabContainerScreen>
-    with TickerProviderStateMixin {
-  late TabController tabviewController;
-
-  @override
-  void initState() {
-    super.initState();
-    tabviewController = TabController(length: 2, vsync: this);
-  }
-
-  @override
   Widget build(BuildContext context) {
     return SafeArea(
       child: Scaffold(
-        appBar: _buildAppBar(context),
         body: SizedBox(
           width: double.maxFinite,
-          child: Column(
-            children: [
-              SizedBox(height: 4.v),
-              _buildTabview(context),
-              Expanded(
-                child: SizedBox(
-                  height: 684.v,
-                  child: TabBarView(
-                    controller: tabviewController,
-                    children: [
-                      AndroidLargeOnePage(),
-                      AndroidLargeTwoPage(),
-                    ],
-                  ),
-                ),
+          child: SingleChildScrollView(
+            child: Column(
+              children: [
+                _buildPhishingTrendsRow(context),
+                SizedBox(height: 3.v),
+                _buildLatestCasesRow(context),
+                SizedBox(height: 16.v),
+                _buildTopicRows(context),
+                SizedBox(height: 15.v),
+                _buildTopicGrid(context),
+                SizedBox(height: 5.v),
+              ],
+            ),
+          ),
+        ),
+      ),
+    );
+  }
+
+  /// Section Widget
+  Widget _buildPhishingTrendsRow(BuildContext context) {
+    return Padding(
+      padding: EdgeInsets.symmetric(horizontal: 10.h),
+      child: Row(
+        mainAxisAlignment: MainAxisAlignment.center,
+        crossAxisAlignment: CrossAxisAlignment.start,
+        children: [
+          Padding(
+            padding: EdgeInsets.only(top: 2.v),
+            child: Text(
+              "Phishing Trends",
+              style: CustomTextStyles.headlineLargePoppinsGray900,
+            ),
+          ),
+          CustomImageView(
+            imagePath: ImageConstant.imgHook1,
+            height: 40.adaptSize,
+            width: 40.adaptSize,
+            margin: EdgeInsets.only(
+              left: 2.h,
+              bottom: 10.v,
+            ),
+          ),
+          Padding(
+            padding: EdgeInsets.only(
+              left: 5.h,
+              top: 9.v,
+              bottom: 13.v,
+            ),
+            child: CustomIconButton(
+              height: 28.adaptSize,
+              width: 28.adaptSize,
+              child: CustomImageView(
+                imagePath: ImageConstant.imgImage436x36,
               ),
-            ],
-          ),
-        ),
-      ),
-    );
-  }
-
-  /// Section Widget
-  PreferredSizeWidget _buildAppBar(BuildContext context) {
-    return CustomAppBar(
-      height: 50.v,
-      title: AppbarTitle(
-        text: "Phishing Trends",
-        margin: EdgeInsets.only(left: 11.h),
-      ),
-      actions: [
-        AppbarTrailingImage(
-          imagePath: ImageConstant.imgHook1,
-          margin: EdgeInsets.only(
-            left: 4.h,
-            right: 10.h,
-          ),
-        ),
-        AppbarTrailingImage(
-          imagePath: ImageConstant.imgImage436x36,
-          margin: EdgeInsets.fromLTRB(5.h, 9.v, 20.h, 3.v),
-        ),
-      ],
-    );
-  }
-
-  /// Section Widget
-  Widget _buildTabview(BuildContext context) {
-    return Container(
-      height: 62.v,
-      width: double.maxFinite,
-      child: TabBar(
-        controller: tabviewController,
-        isScrollable: true,
-        labelColor: appTheme.black900,
-        labelStyle: TextStyle(
-          fontSize: 16.fSize,
-          fontFamily: 'Inter',
-          fontWeight: FontWeight.w300,
-        ),
-        unselectedLabelColor: appTheme.black900,
-        unselectedLabelStyle: TextStyle(
-          fontSize: 16.fSize,
-          fontFamily: 'Inter',
-          fontWeight: FontWeight.w300,
-        ),
-        indicator: BoxDecoration(
-          color: appTheme.blueGray10001,
-          border: Border(
-            bottom: BorderSide(
-              color: appTheme.black900,
-              width: 1.h,
-            ),
-          ),
-        ),
-        tabs: [
-          Tab(
-            child: Text(
-              "Latest cases",
-            ),
-          ),
-          Tab(
-            child: Text(
-              "Main Types",
             ),
           ),
         ],
+      ),
+    );
+  }
+
+  /// Section Widget
+  Widget _buildLatestCasesRow(BuildContext context) {
+    return SizedBox(
+      width: double.maxFinite,
+      child: Row(
+        mainAxisAlignment: MainAxisAlignment.center,
+        children: [
+          CustomOutlinedButton(
+            width: 180.h,
+            text: "Latest cases",
+            buttonStyle: CustomButtonStyles.outlineBlack1,
+          ),
+          CustomOutlinedButton(
+            width: 180.h,
+            text: "Main Types",
+            buttonStyle: CustomButtonStyles.outlineWhite1,
+          ),
+        ],
+      ),
+    );
+  }
+
+  /// Section Widget
+  Widget _buildTopicRows(BuildContext context) {
+    return Padding(
+      padding: EdgeInsets.symmetric(horizontal: 12.h),
+      child: Row(
+        mainAxisAlignment: MainAxisAlignment.center,
+        children: [
+          Expanded(
+            child: Padding(
+              padding: EdgeInsets.only(right: 8.h),
+              child: Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  Card(
+                    clipBehavior: Clip.antiAlias,
+                    elevation: 0,
+                    margin: EdgeInsets.all(0),
+                    color: appTheme.gray300,
+                    shape: RoundedRectangleBorder(
+                      side: BorderSide(
+                        color: appTheme.black900,
+                        width: 4.h,
+                      ),
+                      borderRadius: BorderRadiusStyle.roundedBorder10,
+                    ),
+                    child: Container(
+                      height: 160.adaptSize,
+                      width: 160.adaptSize,
+                      decoration: AppDecoration.outlineBlack900.copyWith(
+                        borderRadius: BorderRadiusStyle.roundedBorder10,
+                      ),
+                      child: Stack(
+                        alignment: Alignment.bottomRight,
+                        children: [
+                          CustomImageView(
+                            imagePath: ImageConstant.imgArrowLeft,
+                            height: 60.adaptSize,
+                            width: 60.adaptSize,
+                            alignment: Alignment.bottomRight,
+                          ),
+                          Align(
+                            alignment: Alignment.bottomRight,
+                            child: Text(
+                              "NEW",
+                              style: theme.textTheme.titleMedium,
+                            ),
+                          ),
+                          CustomImageView(
+                            imagePath: ImageConstant.imgImage1,
+                            height: 80.adaptSize,
+                            width: 80.adaptSize,
+                            alignment: Alignment.center,
+                          ),
+                        ],
+                      ),
+                    ),
+                  ),
+                  SizedBox(height: 6.v),
+                  Padding(
+                    padding: EdgeInsets.only(left: 3.h),
+                    child: Text(
+                      "Topic 1",
+                      style: theme.textTheme.bodyLarge,
+                    ),
+                  ),
+                ],
+              ),
+            ),
+          ),
+          Expanded(
+            child: Padding(
+              padding: EdgeInsets.only(left: 8.h),
+              child: Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  Container(
+                    height: 160.adaptSize,
+                    width: 160.adaptSize,
+                    padding: EdgeInsets.symmetric(
+                      horizontal: 38.h,
+                      vertical: 40.v,
+                    ),
+                    decoration: AppDecoration.fillGray.copyWith(
+                      borderRadius: BorderRadiusStyle.roundedBorder10,
+                    ),
+                    child: CustomImageView(
+                      imagePath: ImageConstant.imgImage1,
+                      height: 80.adaptSize,
+                      width: 80.adaptSize,
+                      alignment: Alignment.center,
+                    ),
+                  ),
+                  SizedBox(height: 6.v),
+                  Padding(
+                    padding: EdgeInsets.only(left: 3.h),
+                    child: Text(
+                      "Topic 2",
+                      style: theme.textTheme.bodyLarge,
+                    ),
+                  ),
+                ],
+              ),
+            ),
+          ),
+        ],
+      ),
+    );
+  }
+
+  /// Section Widget
+  Widget _buildTopicGrid(BuildContext context) {
+    return Padding(
+      padding: EdgeInsets.symmetric(horizontal: 12.h),
+      child: GridView.builder(
+        shrinkWrap: true,
+        gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
+          mainAxisExtent: 191.v,
+          crossAxisCount: 2,
+          mainAxisSpacing: 16.h,
+          crossAxisSpacing: 16.h,
+        ),
+        physics: NeverScrollableScrollPhysics(),
+        itemCount: 6,
+        itemBuilder: (context, index) {
+          return TopicgridItemWidget();
+        },
       ),
     );
   }

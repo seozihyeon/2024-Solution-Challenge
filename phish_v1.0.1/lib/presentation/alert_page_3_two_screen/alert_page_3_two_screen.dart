@@ -35,7 +35,7 @@ class AlertPage3TwoScreen extends StatelessWidget {
                 width: 329.h,
                 child: Text(
                   "Number of Detected*: Phishing Type: Blackmailer",
-                  maxLines: 2,
+                  maxLines: 3,
                   overflow: TextOverflow.ellipsis,
                   textAlign: TextAlign.center,
                   style: CustomTextStyles.headlineSmallBlack900,

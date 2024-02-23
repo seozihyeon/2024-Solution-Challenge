@@ -24,7 +24,7 @@ class MyApp extends StatelessWidget {
           theme: theme,
           title: 'phish',
           debugShowCheckedModeBanner: false,
-          initialRoute: AppRoutes.revisedFrameZeroScreen,
+          initialRoute: AppRoutes.revisedFrameZerominusOneScreen,
           routes: AppRoutes.routes,
         );
       },

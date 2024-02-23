@@ -3,6 +3,8 @@ import 'package:phish/core/app_export.dart';
 import 'package:phish/widgets/app_bar/appbar_leading_image.dart';
 import 'package:phish/widgets/app_bar/appbar_subtitle_one.dart';
 import 'package:phish/widgets/app_bar/custom_app_bar.dart';
+import 'package:phish/widgets/custom_elevated_button.dart';
+import 'package:phish/presentation/alert_page_3_two_five_screen/alert_page_3_two_five_screen.dart';
 
 class AlertPage3TwoThreeScreen2 extends StatelessWidget {
   final int detectedKeywords;
@@ -23,7 +25,8 @@ class AlertPage3TwoThreeScreen2 extends StatelessWidget {
     return SafeArea(
       child: Scaffold(
         appBar: _buildAppBar(context),
-        body: Container(
+        body: SingleChildScrollView(
+        child: Container(
           width: double.maxFinite,
           padding: EdgeInsets.symmetric(
             horizontal: 15.h,
@@ -33,7 +36,7 @@ class AlertPage3TwoThreeScreen2 extends StatelessWidget {
             children: [
               Container(
                 width: double.infinity,
-                height: 70,
+                height: 90,
                 color: Colors.grey[50], // Placeholder color
                 child: Column(
                   mainAxisAlignment: MainAxisAlignment.center,
@@ -70,14 +73,19 @@ class AlertPage3TwoThreeScreen2 extends StatelessWidget {
                 ),
               ),
               SizedBox(height: 28.v),
-              Text(
-                "Details",
-                style: CustomTextStyles.bodyLargeInterGray900,
+              CustomElevatedButton(
+                height: 60.h,
+                width: 250.h,
+                text: "* See Details...",
+                onPressed: () {
+                  _completeSplash(context, AlertPage3TwoFiveScreen());
+                },
               ),
               SizedBox(height: 5.v),
             ],
           ),
         ),
+    ),
       ),
     );
   }
@@ -121,4 +129,9 @@ class AlertPage3TwoThreeScreen2 extends StatelessWidget {
       ),
     );
   }
+}
+
+void _completeSplash(BuildContext context, Widget widget) {
+  Navigator.pushReplacement(
+      context, MaterialPageRoute(builder: (BuildContext context) => widget));
 }
